@@ -1,0 +1,106 @@
+.sidebar {
+    position: fixed;
+    top: 50px; /* Para alinearse con la navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 50px); /* Ocupa toda la altura menos la navbar */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: #333; /* Color oscuro para el texto */
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .new-note-btn {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .new-note-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .notes-list {
+    flex-grow: 1;
+    overflow-y: auto; /* Permite scroll si hay muchas notas */
+    padding-right: 5px;
+  }
+  
+  .note-item {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #222;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 8px;
+  }
+  
+  .note-item:hover {
+    background-color: #dde1e6;
+  }
+  
+  .empty-message {
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para scroll en la lista de notas */
+  .notes-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .notes-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .notes-list::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+    .sidebar-header h2 {
+      font-size: 1.2rem;
+    }
+    .new-note-btn {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
+    .note-item {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  

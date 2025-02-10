@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  overflow: hidden;
+  height: 100vh; /* Asegura que el body ocupe toda la altura */
+  margin: 0;
+  padding: 0;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;

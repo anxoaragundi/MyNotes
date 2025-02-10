@@ -1,0 +1,116 @@
+body {
+    padding-top: 50px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    margin-left: 260px;
+    margin-top: 20px;
+    width: calc(100% - 260px);
+    height: calc(100vh - 70px); /* Se ajusta a la altura total menos la navbar */
+    box-sizing: border-box;
+  }
+  
+  .note-title-container {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  .note-title {
+    width: 100%;
+    padding: 20px;
+    font-size: 2rem; /* Aumentado el tamaño de la fuente */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    background-color: white;
+    color: #222;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .note-title:focus {
+    border-color: #007bff;
+    background-color: #eef5ff;
+  }
+  
+  .note-text-container {
+    width: 100%;
+    flex-grow: 1; /* Permite que el textarea ocupe todo el espacio disponible */
+  }
+  
+  .note-text {
+    width: 100%;
+    height: 500px; /* Aumentada la altura del área de texto */
+    padding: 20px;
+    font-size: 1.5rem; /* Más grande y más cómodo */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    color: #222;
+    background-color: white;
+    resize: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .note-text:focus {
+    border-color: #007bff;
+    background-color: #eef5ff;
+  }
+  
+  .save-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .save-button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5rem; /* Aumentado el tamaño del botón */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .save-button:focus {
+    outline: none;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 20px;
+      height: calc(100vh - 60px);
+    }
+    .note-title {
+      font-size: 1.8rem;
+      padding: 15px;
+    }
+    .note-text {
+      font-size: 1.3rem;
+      padding: 15px;
+      height: 400px;
+    }
+    .save-button {
+      font-size: 1.3rem;
+      padding: 12px 25px;
+    }
+  }
+  
